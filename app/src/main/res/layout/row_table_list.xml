@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="student"
+            type= "com.example.learning.mvvm_room.models.room.student_table.StudentEntity" />
+    </data>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1,2,3,4,5">
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:layout_column="1"
+                android:gravity="center"
+                android:text="@{Long.toString(student.s_id)}" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_column="1"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:text="@{student.s_name}" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_column="1"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:text="@{Integer.toString(student.s_rollNo)}" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:layout_column="1"
+                android:gravity="center"
+                android:text="@{student.s_class}" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_column="1"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:text="@{student.dob}" />
+        </TableRow>
+    </TableLayout>
+</layout>
